@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Case Study of Project 2</title>
+    <meta name="description" content="Case study page of Project" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/logo.jpg"
+              alt="Ram Maheshwari Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Priyadharshini Amudan</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Project 2</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            MDDial - Developing Prompting Techniques to achieve Efficient
+            Differential Diagnosis Dialogue System
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="#" class="btn btn--bg" target="_blank">Live Link</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/jpeg/project-mockup-example.jpeg"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                In this project, I leveraged OpenAI’s GPT-3 model extensively in
+                order to apply prompting techniques (listed below in
+                Experiments) to see if GPT-3 can do a good job in the domain of
+                differential diagnosis. GPT-3 performed moderately when no
+                prompting techniques were used and had quite a few issues
+                including but not limited to an incorrect diagnosis,
+                inconsistent diagnosis, unnecessary explanations, etc. To help
+                resolve these issues, I devised eight prompting techniques that
+                worked well and eliminated one or more issues that I faced
+                earlier. The prompting techniques have used a variety of
+                approaches with some using Few-Shot, Chain-of-Thought,
+                Least-to-Most, and even a combination of these approaches.
+              </p>
+              <p class="project-details__desc-para">
+                Next, for evaluating traditional transformer-based model
+                performance against GPT-3 based on prompting techniques, I chose
+                GPT-2 and DialoGPT given their ability to predict the next word
+                given the context. I trained these models using the MDDial
+                training dataset and evaluated their performance using the test
+                dataset. The results of this evaluation are provided below. The
+                MDDial dataset contains 1879 patient and doctor dialogues in the
+                training set and 235 dialogues in the test set. The dataset
+                contains dialogues with diagnoses for twelve diseases namely:
+                Esophagitis, Enteritis, Asthma, Coronary heart disease,
+                Pneumonia, Rhinitis, Thyroiditis, Traumatic brain injury,
+                Dermatitis, External otitis, Conjunctivitis, and Mastitis. The
+                dataset has 155-165 dialogues for each of the diseases resulting
+                in a total of 16,560 turns between patient and doctor.
+              </p>
+              <p class="project-details__desc-para">
+                The performance of GPT-3 has been most astonishing to us. GPT-3
+                showed performance that was way better than GPT-2 and DialoGPT
+                models fine-tuned on differential diagnosis dataset with more
+                than 16 thousand turns.
+              </p>
+
+              <p class="project-details__desc-para">
+                Both GPT-2 and DialoGPT have quite similar performance with
+                DialoGPT leading with 3% higher accuracy. It is interesting to
+                note that data generated using GPT-3 through prompting
+                techniques helped increase the accuracy of GPT-2 while on the
+                other hand, DialoGPT suffered when GPT-3 dialogues were
+                introduced. That being said, these results are in no way
+                representative of GPT-3’s ability to provide well-synthesized
+                datasets given the number of dialogues generated using GPT-3 was
+                far less (50 dialogues) when compared to the dialogues present
+                in the training set of MDDial (1827 dialogues)
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">ChatGPT</div>
+                <div class="skills__skill">NLP</div>
+                <div class="skills__skill">Language Models</div>
+                <div class="skills__skill">Git</div>
+                <div class="skills__skill">SASS</div>
+                <div class="skills__skill">GIT</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="#"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="#"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/twitter-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/yt-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">John Doe</h4>
+            <p class="main-footer__short-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
+              tempora explicabo quae quod deserunt
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. Made by
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
